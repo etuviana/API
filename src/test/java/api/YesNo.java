@@ -27,23 +27,7 @@ public class YesNo extends BaseTest{
 		}
 	}
 
-	@Test(description = "Retrive Body")
-	public void retriveBody() throws InterruptedException {
 
-		{
-			String Body = when().get("https://yesno.wtf/api").asString();
-			System.out.println(Body);
-		}
 	}
 
-	@Test(description = "Check and retrive Body")
-	public void retriveBody1() throws InterruptedException {
-		{
-			Response response = when().get("https://yesno.wtf/api").then().contentType(ContentType.XML).extract()
-					.response();
-			// will run only if response type XML
-			System.out.println(response.asString());
-		}
-	}
 
-}
